@@ -5,7 +5,7 @@
 Installation guide for [React.js](https://facebook.github.io/react/) for TextAnalysis-FrontEnd
 First we need a package manager, i prefer Node package manager([NPM](https://www.npmjs.com/)) over the newer [yarn](https://yarnpkg.com/) as it has wider documentation and support.
 
-####Install npm 
+#### Install npm 
 Open Terminal and type
 ```sh
 brew install node
