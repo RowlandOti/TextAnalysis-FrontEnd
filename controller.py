@@ -4,7 +4,7 @@ from functools import update_wrapper
 app = Flask(__name__, static_path='/static')
 import os
 
-
+# had to use this lengthy method for my CORS, but i discovered flask_cors, will implement in next push :)
 
 def crossdomain(origin=None, methods=None, headers=None,
                 max_age=21600, attach_to_all=True,
@@ -49,7 +49,7 @@ def crossdomain(origin=None, methods=None, headers=None,
 
 
 
-
+# an idea of what your api would look like
 analyze = [
     {
         'id' : 1,
@@ -63,6 +63,7 @@ analyze = [
         'sentiment': u'See you later',
         'ratings': 0
     }]
+
 
 @app.route("/", methods=['GET'])
 def askApi():
@@ -101,7 +102,9 @@ def index(text):
     return jsonify({'analyze': analyzed[0]})
 
 
-@app.route("/api/v2.0/newSentiment", methods=["POST"])
+# still buggy will fix later
+
+"""@app.route("/api/v2.0/newSentiment", methods=["POST"])
 @crossdomain(origin='*')
 def newSents():
     if not request.json or not 'key' in request.json:
@@ -114,4 +117,4 @@ def newSents():
     }
 
     analyze.append(newSent)
-    return jsonify({'analyze': newSent}), 201
+    return jsonify({'analyze': newSent}), 201"""

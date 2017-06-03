@@ -54,6 +54,7 @@ touch webpack.config.js
 
 Open the config file with your fav editor and copy the lines below
 ```sh
+
 var webpack = require('webpack');
 var path = require('path');
 
@@ -61,7 +62,7 @@ var BUILD_DIR = path.resolve(__dirname, 'build');
 var APP_DIR = path.resolve(__dirname, 'templates');
 
 var config = {
-  entry: BUILD_DIR + '/index.js',
+  entry: BUILD_DIR + '/main.jsx',
   output: {
     path: BUILD_DIR,
     filename: 'analyze.min.js'
@@ -74,12 +75,12 @@ var config = {
     exclude: /(node_modules)/,
     include : BUILD_DIR,
     loader : 'babel-loader'
-    }
-   ]
+  }]
   }
 };
 
 module.exports = config;
+
 
 ```
 Notice we use [babel-loader](https://babeljs.io/), install it and other core components by typing
@@ -103,8 +104,18 @@ npm install -S react react-dom material-ui
 
 I'll use [Material-Ui](www.material-ui.com/) is for the Styling
 
-Hope this works Perfectly :)
 
-### Try following these steps then later i will push all the code for the Front End
+### How it works
+Ensure the [Flask-Backend]() is running.
 
-Regards, Michael
+Use 
+```sh
+npm run build
+```
+
+Open the file in your browser
+```sh
+templates/index.html 
+```
+
+Type in any Text you want analyzed and the Flask API will handle the rest

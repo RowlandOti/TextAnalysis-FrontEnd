@@ -18,14 +18,7 @@ var config = {
     exclude: /(node_modules)/,
     include : BUILD_DIR,
     loader : 'babel-loader'
-  }
-  //,{
-    //test: /\.css$/,
-    //loader: 'style-loader!css-loader!postcss-loader',
-    //include: path.join(__dirname, 'node_modules'),
-    //exclude: /flexboxgrid/
-  //}
-   ]
+  }]
   }
 };
 
