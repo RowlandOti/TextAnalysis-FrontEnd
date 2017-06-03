@@ -30,10 +30,12 @@ touch index.html
 cd ..
 
 cd build
-touch index.js
+touch Mine.js
+touch main.jsx
+touch Search.js
 ```
 The templates folder is where we will store our html files. To be served up with [Flask](flask.pocoo.org/)
-index.js is where we will write our code
+main.jsx is where we will write our code
 
 Now run
 ```sh
